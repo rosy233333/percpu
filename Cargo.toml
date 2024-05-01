@@ -20,8 +20,8 @@ default = []
 
 [dependencies]
 cfg-if = "1.0"
-kernel_guard = { path = "../kernel_guard", optional = true }
-percpu_macros = { path = "../percpu_macros" }
+kernel_guard = { git = "https://github.com/Starry-OS/kernel_guard.git", optional = true }
+percpu_macros = { git = "https://github.com/Starry-OS/percpu_macros.git" }
 
 [target.'cfg(target_arch = "x86_64")'.dependencies]
 x86 = "0.52"

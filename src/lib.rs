@@ -56,7 +56,7 @@ pub use percpu_macros::def_percpu;
 #[doc(hidden)]
 pub mod __priv {
     #[cfg(feature = "preempt")]
-    pub use kernel_guard::NoPreempt as NoPreemptGuard;
+    pub use kernel_guard::IrqSave as NoPreemptGuard;
 }
 
 cfg_if::cfg_if! {
